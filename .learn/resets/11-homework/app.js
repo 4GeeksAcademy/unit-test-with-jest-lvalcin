@@ -19,7 +19,19 @@ let yenAmount = euroAmount * oneEuroIs["JPY"];
 return yenAmount;
 }
 
-function fromYenToPound(yenAmount){
+
+function EuroToDollar(euroAmount){
+    let oneEuroIs = {
+        "JPY": 156.5, // Japan yen
+        "USD": 1.07, // US dollar
+        "GBP": 0.87, // British pound
+    };
+    let dollarAmount = euroAmount * oneEuroIs["USD"];
+
+    return dollarAmount;
+}
+
+function YenToPound(yenAmount){
     let oneEuroIs = {
         "JPY": 156.5, // Japan yen
         "USD": 1.07, // US dollar
@@ -31,4 +43,4 @@ function fromYenToPound(yenAmount){
  
     return poundAmount;
 }
-module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound }
+module.exports = { sum, fromEuroToDollar }
